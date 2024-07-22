@@ -19,7 +19,7 @@ return {
             palette = {},
             theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
           },
-          overrides = function(colors) -- add/modify highlights
+          overrides = function() -- add/modify highlights
             return {}
           end,
           theme = "lotus", -- Load "wave" theme when 'background' option is not set
