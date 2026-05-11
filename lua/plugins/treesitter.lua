@@ -19,6 +19,10 @@ return {
 
             highlight = {
                 enable = true,
+                disable = function(_, buf)
+                    local path = vim.api.nvim_buf_get_name(buf)
+                    return path:match("node_modules") or path:match("%.next")
+                end,
             },
 
             indent = {

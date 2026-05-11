@@ -30,6 +30,9 @@ return {
                 filters = {
                     dotfiles = false,
                 },
+                filesystem_watchers = {
+                    ignore_dirs = { "node_modules", ".next", ".git" },
+                },
                 actions = {
                     open_file = {
                         quit_on_open = false,
