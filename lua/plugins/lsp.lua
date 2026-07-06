@@ -6,7 +6,13 @@ return {
     {
         "williamboman/mason.nvim",
         config = function()
-            require("mason").setup()
+            require("mason").setup({
+                -- extra registry: carries "roslyn", not yet in Mason core
+                registries = {
+                    "github:Crashdummyy/mason-registry",
+                    "github:mason-org/mason-registry",
+                },
+            })
         end,
     },
 

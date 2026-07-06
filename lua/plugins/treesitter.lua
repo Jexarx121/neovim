@@ -15,6 +15,7 @@ return {
                 "javascript",
                 "html",
                 "xml",
+                "c_sharp",
             },
 
             highlight = {
