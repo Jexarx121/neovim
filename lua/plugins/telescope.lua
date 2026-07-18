@@ -8,7 +8,27 @@ return {
         local builtin = require('telescope.builtin')
         require('telescope').setup({
             defaults = {
-                file_ignore_patterns = { "node_modules/", "%.next/", "%.git/", "dist/", "build/" },
+                file_ignore_patterns = {
+                    "node_modules[/\\]",
+                    "%.next[/\\]",
+                    "%.git[/\\]",
+                    "dist[/\\]",
+                    "build[/\\]",
+                    -- Unity
+                    "Library[/\\]",
+                    "Temp[/\\]",
+                    "Obj[/\\]",
+                    "obj[/\\]",
+                    "Logs[/\\]",
+                    "MemoryCaptures[/\\]",
+                    "Build[/\\]",
+                    "Builds[/\\]",
+                    "UserSettings[/\\]",
+                    "%.vs[/\\]",
+                    "%.meta$",
+                    "%.csproj$",
+                    "%.sln$",
+                },
             },
         })
         vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })

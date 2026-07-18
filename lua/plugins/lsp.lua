@@ -118,6 +118,8 @@ return {
                     source = "if_many",
                     header = "",
                     prefix = "",
+                    wrap = true,
+                    max_width = 80,
                 },
                 signs = {
                     text = {
@@ -186,7 +188,11 @@ return {
             vim.lsp.config["lua_ls"] = {
                 cmd = { "lua-language-server" },
                 filetypes = { "lua" },
-                root_markers = { { ".luarc.json", ".luarc.jsonc" }, ".git" },
+                root_dir = function(bufnr, on_dir)
+                    local fname = vim.api.nvim_buf_get_name(bufnr)
+                    local root = vim.fs.root(fname, { ".luarc.json", ".luarc.jsonc", ".git" })
+                    on_dir(root or vim.fs.dirname(fname))
+                end,
                 capabilities = caps,
                 settings = {
                     Lua = {

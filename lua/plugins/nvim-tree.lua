@@ -31,7 +31,11 @@ return {
                     dotfiles = false,
                 },
                 filesystem_watchers = {
-                    ignore_dirs = { "node_modules", ".next", ".git" },
+                    ignore_dirs = {
+                        "node_modules", ".next", ".git",
+                        -- Unity: metadata cache + build/editor scratch dirs
+                        "Library", "Temp", "obj", "Obj", "Logs", ".vs", "UserSettings", "Build", "Builds",
+                    },
                 },
                 actions = {
                     open_file = {

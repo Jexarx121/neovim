@@ -69,14 +69,14 @@ A Neovim setup tailored for fullstack web development, with LSP support for Type
 | `<CR>` | Confirm selection |
 | `<C-b>` / `<C-f>` | Scroll docs up / down |
 
-### Terminal
+### Splits
 | Key | Action |
 |---|---|
-| `<leader>t` | Open new terminal |
-| `<leader>td` | Delete terminal |
-| `<leader>st` | Toggle all terminals |
-| `<C-l>` / `<C-h>` | Next / previous terminal |
-| `<Esc>` | Exit terminal insert mode |
+| `<leader>sv` | Split vertically |
+| `<leader>sh` | Split horizontally |
+| `<leader>sx` | Close split |
+| `<leader>se` | Equalize split sizes |
+| `<C-h>` / `<C-j>` / `<C-k>` / `<C-l>` | Navigate between splits |
 
 ### Editing
 | Key | Action |
